@@ -4,47 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <style>
+    #section{
+        height: 800px;
+     width: 1300;
+     background-image: url(https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg);
+     background-size: 1300px 800px;
+     background-repeat:repeat;
+     font-family: sans-serif;
+    }
+    nav{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#items{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+    #item{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    color: azure;
+    }
+
+
+ #nav{
+    height: 1000px;
+    width: 1000px;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+ }
+
+       
+    #img1{
+        background-image: url(data:image/png;base64,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);
+        height: 200px;
+        width: 100%;
+        background-repeat:no-repeat ;
+        align-items:center;
+        justify-items: right;
+        align-content: right;
+        
+    
+}
+#i{
+    justify-content: space-evenly;
+}
+#text2{
+    color: rgba(217, 217, 223, 0.912);
+    font-size: 30px;
+    text-indent: 40px;
+}
+#i{
+    justify-content: center;
+    white-space: 50px;
+}
+#text3{
+    color:wheat;
+    font-size:10px ;
+    width: 900px;
+ 
+}
+#text4{
+    color:black;
+    background-color:green ;
+    height: 30px;
+    width: 15%;
+} 
+#text5{
+    color:black;
+    background-color:orangered ;
+    height: 30px;
+    width: 15%;
+}
+
+</style>
 </head>
 <body>
-    <center>
-        <table border="1" cell spacing="10px" cell padding="10px">
-            <tr>
-                <th colspan="3">Food span</th>
-            
-            </tr>
-            <tr>
-                <td><a href="https://hebbarskitchen.com/veg-pulao-recipe-vegetable-pulao/" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZRhyo-Zt6dtTBw9m-jPZYvkt8rMp9yZOsw&s" height="200px" width="200px" alt="pulao">
-                </a></td>
-                <td><a href="https://www.indianhealthyrecipes.com/masala-dosa-recipe/" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLiAyR1OwfYttZy8OausIcZWzWPgqQWq8vmw&s" height="200px"  width="200px"alt="masal dosa">
-                </a></td>
-                <td><a href="https://hebbarskitchen.com/puliyogare-gojju-recipe-tamarind-rice/" target="_blank">
-                    <img src="https://smithakalluraya.com/wp-content/uploads/2020/03/puliyogare.jpg" height="200px" width="200px"alt="puliyogre">
-                </a></td>
-            </tr>
-            <tr>
-                <td><a href="https://hebbarskitchen.com/masala-puri-recipe-bangalore-street/" target="_blank">
-                    <img src="https://1.bp.blogspot.com/-OqIwWINJRHk/XSIhJrGXF-I/AAAAAAAARdc/PTiKkK0x7bcIRVVJPC8H9-UcgaR0TgwCACLcBGAs/s1600/Masala_Puri_4.jpg" height="200px" width="200px"alt="masal puri">
-                </a></td>
-                <td><a href="https://www.recipetineats.com/french-fries/" target="_blank">
-                    <img src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1.jpg" height="200px" width="200px"alt="French fries">
-                </a></td>
-                <td><a href="https://www.indianhealthyrecipes.com/corn-chaat/" target="_blank">
-                    <img src="https://vegecravings.com/wp-content/uploads/2018/10/Masala-Corn-Recipe-Step-By-Step-Instructions-8.jpg.webp" height="200px" width="200px"alt="Sweet corn">
-                </a></td>
-            </tr>
-            <tr>
-                <td><a href="https://www.indianhealthyrecipes.com/chum-chum-recipe-bengali-sweet/" target="_blank">
-                    <img src="https://tiimg.tistatic.com/fp/1/004/788/delicious-champakali-indian-sweet-151.jpg" height="200px" width="200px"alt="champakali">
-                </a></td>
-                <td><a href="https://www.haldirams.com/soan-papdi-elaichi-1478.html" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_0o2DOUmzsmopmQON5L0iVPqYJVa0Z00cU2wDtW-HuUsRnBGghyifmqQhukMF_aUMg8&usqp=CAU" height="200px" width="200px"alt="Soan papdi">
-                </a></td>
-                <td><a href="https://www.indianhealthyrecipes.com/peda-doodh-peda-recipe/" target="_blank">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuoFyxDzMTxs6FYowBYvYqE4-FteWuL9pz7g&s" height="200px" width="200px"alt="peda">
-                </a></td>
-            </tr>
-        </table>
+    <i class="fa-solid fa-user"></i>
+    <header>
+        
+        <nav>
+        
+            <div id="items">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Courses</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Gallary</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-magnifying-glass fa-beat"></i>
+                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </nav>
+    
+
+
+    <div id="section"><div id="img1"></div>
+    
+    <div id="text2">GET READY FOR YOUR BUSINESS & UPGRADE ALL ASPECTS</div>
+
+<article>
+<p id="text3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi vero atque fugit maiores officiis unde magni sequi, quas nam eum eius enim hic soluta temporibus numquam quibusdam fugiat repudiandae asperiores et deserunt. Eveniet, temporibus. Incidunt eum quam dolorem repellendus beatae, soluta voluptates repudiandae asperiores nesciunt sed accusamus harum iusto tempore.</p>
+<button type="submit"id="text4" > checkout here</button>
+<button type="reset" id="text5">contact us</button>
+    </article> 
+
+</div>
+
+</header>
+ 
+    
+
 </body>
 </html>
